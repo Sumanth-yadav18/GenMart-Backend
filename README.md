@@ -69,4 +69,4 @@ python manage.py runserver
 
 ## Author
 
-Anand Reddy
+G Sumanth
