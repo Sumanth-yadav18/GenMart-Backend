@@ -38,10 +38,10 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "storages", # aws s3 imgs
     "app",
     "rest_framework",
     "corsheaders",  # connecting frontend backend
-    "storages", # aws s3 imgs
 ]
 
 MIDDLEWARE = [
