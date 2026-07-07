@@ -141,25 +141,26 @@ class OrderViewSet(viewsets.ModelViewSet):
         order.save()
         cart_items.delete()
 
-        try:
-
-            send_mail(
+        if settings.DEBUG:
+            try:
+                send_mail(
                 subject=f"Genmart Order {order.order_id}",
                 message=f"""
-                Hello {order.full_name},
-                Your order has been placed successfully.
-                Order ID : Order ID : {order.order_id}
-                Total Amount : ₹{order.total}
-                Thank you for shopping with Genmart.
-                We'll notify you once your order is shipped.""",
+                        Hello {order.full_name},
+
+                        Your order has been placed successfully.
+
+                        Order ID: {order.order_id}
+
+                        Total Amount: ₹{order.total}
+
+                        Thank you for shopping with GenMart.""",
                 from_email=settings.EMAIL_HOST_USER,
                 recipient_list=[order.email],
-                fail_silently=True,
-                )
-
-        except Exception:
-            pass
-
+                fail_silently=True,)
+            except Exception:
+                pass
+    
         try:
             serializer = self.get_serializer(order)
             return Response(serializer.data)
