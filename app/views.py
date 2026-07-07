@@ -160,8 +160,12 @@ class OrderViewSet(viewsets.ModelViewSet):
         except Exception:
             pass
 
-        serializer = self.get_serializer(order)
-        return Response(serializer.data)
+        try:
+            serializer = self.get_serializer(order)
+            return Response(serializer.data)
+        except Exception as e:
+            print("ORDER SERIALIZER ERROR:", e)
+            raise
 
 
 @api_view(["GET", "POST"])
