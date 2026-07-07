@@ -235,9 +235,9 @@
   "model": "app.product",
   "pk": 12,
   "fields": {
-    "name": "Montblanc Meisterstück Leather Wallet",
+    "name": "Montblanc MeisterstÃ¼ck Leather Wallet",
     "price": 35999.0,
-    "description": "The Montblanc Meisterstück Leather Wallet is crafted from premium full-grain European leather, offering a sophisticated design with multiple card slots, dedicated cash compartments, and RFID protection. It combines timeless luxury with everyday functionality.",
+    "description": "The Montblanc Meisterstï¿½ck Leather Wallet is crafted from premium full-grain European leather, offering a sophisticated design with multiple card slots, dedicated cash compartments, and RFID protection. It combines timeless luxury with everyday functionality.",
     "image": "products/montblanc-wallet.png",
     "stock": 15,
     "category": "Accessory",
